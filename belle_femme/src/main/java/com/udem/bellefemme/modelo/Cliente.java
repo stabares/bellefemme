@@ -48,5 +48,4 @@ public class Cliente {
 	public void setCelular(long celular) {
 		this.celular = celular;
 	}
-	
 }
