@@ -28,4 +28,12 @@ public interface ClienteServicio {
 	@Path("/clientes")
 	@POST
 	Response agregarCliente(Cliente cliente);
+
+	@Path("/clientes")
+	@PUT
+	Cliente actualizarCliente(Cliente cliente);
+	
+	@Path("/clientes/{id}")
+	@DELETE
+	Cliente eliminarCliente(@PathParam("id") Long id);
 }

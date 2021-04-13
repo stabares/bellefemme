@@ -50,5 +50,17 @@ public class ClienteServicioImp implements ClienteServicio {
 		clientes.put(cliente.getCedula(), cliente);
 		return Response.ok(cliente).build();
 	}
+
+	@Override
+	public Cliente actualizarCliente(Cliente cliente) {
+		clientes.put(cliente.getCedula(), cliente);
+		return cliente;
+	}
+
+	@Override
+	public Cliente eliminarCliente(Long cedula) {
+		clientes.remove(cedula);
+		return null;
+	}
 		
 }
