@@ -14,24 +14,8 @@ import com.udem.bellefemme.modelo.Cliente;
 @Service
 public class ClienteServicioImp implements ClienteServicio {
 	
-	Map<Long, Cliente> clientes = new HashMap<>();
-	long idAct = 123;
-
-	public ClienteServicioImp() {
-		init();
-	}
-
-	void init() {
-		Cliente cliente = new Cliente();
-		cliente.setCedula(idAct);
-		cliente.setNombre("Sara");
-		cliente.setApellidos("Zapata");
-		cliente.setCelular(123456);
-		cliente.setCorreo("saraz@gmail.com");
-		cliente.setDireccion("cl 100 # 01 - 30");
-		clientes.put(cliente.getCedula(), cliente);
-	}
-
+	Map<Long, Cliente> clientes = new HashMap<>();	
+	
 	@Override
 	public List<Cliente> getClientes() {
 		Collection<Cliente> result =clientes.values();
@@ -40,26 +24,25 @@ public class ClienteServicioImp implements ClienteServicio {
 	}
 
 	@Override
-	public Cliente getCliente(Long cedula) {
-		return clientes.get(cedula);
+	public Cliente getCliente(Long id) {
+		return clientes.get(id);
 	}
 
 	@Override
 	public Response agregarCliente(Cliente cliente) {
-		cliente.setCedula(++idAct);
-		clientes.put(cliente.getCedula(), cliente);
+		clientes.put(cliente.getId(), cliente);
 		return Response.ok(cliente).build();
 	}
 
 	@Override
 	public Cliente actualizarCliente(Cliente cliente) {
-		clientes.put(cliente.getCedula(), cliente);
+		clientes.put(cliente.getId(), cliente);
 		return cliente;
 	}
 
 	@Override
-	public Cliente eliminarCliente(Long cedula) {
-		clientes.remove(cedula);
+	public Cliente eliminarCliente(Long id) {
+		clientes.remove(id);
 		return null;
 	}
 		
