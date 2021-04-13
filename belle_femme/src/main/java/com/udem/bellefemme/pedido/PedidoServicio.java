@@ -24,4 +24,20 @@ public interface PedidoServicio {
 	@Path("/pedidos")
 	@POST
 	Response crearPedido(Pedido pedido);
+	
+	@Path("/pedidos/{codigoPedido}")
+	@GET
+	Pedido getPedido(@PathParam("codigoPedido") Long codigoPedido);
+	
+	@Path("/pedidos/{nombreCliente}")
+	@GET
+	Pedido getPedido(@PathParam("nombreCliente") String nombreCliente);
+	
+	@Path("/pedidos")
+	@PUT
+	Response actualizarPedido(Pedido pedido);
+	
+	@Path("/pedidos/{codigoPedido}")
+	@DELETE
+	Response eliminarPedido(@PathParam("codigoPedido") Long codigoPedido);
 }
