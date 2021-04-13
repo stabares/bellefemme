@@ -5,18 +5,18 @@ import javax.xml.bind.annotation.XmlRootElement;
 @XmlRootElement(name="Cliente")
 public class Cliente {
 	
-	private long cedula;
+	private long id;
 	private String nombre;
 	private String apellidos;
 	private String direccion;
 	private String correo;
 	private long celular;
 	
-	public long getCedula() {
-		return cedula;
+	public long getId() {
+		return id;
 	}
-	public void setCedula(long cedula) {
-		this.cedula = cedula;
+	public void setId(long id) {
+		this.id = id;
 	}
 	public String getNombre() {
 		return nombre;
