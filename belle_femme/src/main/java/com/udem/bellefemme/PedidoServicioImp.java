@@ -19,14 +19,12 @@ public class PedidoServicioImp implements PedidoServicio {
 	Map<Long,Pedido> pedidos = new HashMap<>();
 	long idAct = 000;
 	
-	
 	@Override
 	public List<Pedido> getPedidos() {
 		Collection<Pedido> result = pedidos.values();
 		List<Pedido> respuesta = new ArrayList<>(result);
 		return respuesta;
 	}
-
 
 	@Override
 	public Response crearPedido(Pedido pedido) {
