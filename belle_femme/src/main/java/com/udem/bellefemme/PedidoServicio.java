@@ -24,5 +24,4 @@ public interface PedidoServicio {
 	@Path("/pedidos")
 	@POST
 	Response crearPedido(Pedido pedido);
-
 }
