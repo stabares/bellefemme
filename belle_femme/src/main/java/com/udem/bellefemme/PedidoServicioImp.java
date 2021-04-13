@@ -32,6 +32,4 @@ public class PedidoServicioImp implements PedidoServicio {
 		pedidos.put(pedido.getCodigoPedido(), pedido);
 		return Response.ok(pedido).build();
 	}
-	
-	
 }
