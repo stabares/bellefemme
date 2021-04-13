@@ -1,0 +1,14 @@
+{
+    "configurations": [
+        {
+            "type": "java",
+            "name": "Spring Boot-BelleFemmeApplication<belle_femme>",
+            "request": "launch",
+            "cwd": "${workspaceFolder}",
+            "console": "internalConsole",
+            "mainClass": "com.udem.bellefemme.BelleFemmeApplication",
+            "projectName": "belle_femme",
+            "args": ""
+        }
+    ]
+}
