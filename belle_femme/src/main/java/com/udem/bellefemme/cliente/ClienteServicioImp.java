@@ -17,6 +17,21 @@ public class ClienteServicioImp implements ClienteServicio {
 	Map<Long, Cliente> clientes = new HashMap<>();
 	long idAct = 123;
 
+	public ClienteServicioImp() {
+		init();
+	}
+
+	void init() {
+		Cliente cliente = new Cliente();
+		cliente.setCedula(idAct);
+		cliente.setNombre("Sara");
+		cliente.setApellidos("Zapata");
+		cliente.setCelular(123456);
+		cliente.setCorreo("saraz@gmail.com");
+		cliente.setDireccion("cl 100 # 01 - 30");
+		clientes.put(cliente.getCedula(), cliente);
+	}
+
 	@Override
 	public List<Cliente> getClientes() {
 		Collection<Cliente> result =clientes.values();
@@ -35,7 +50,5 @@ public class ClienteServicioImp implements ClienteServicio {
 		clientes.put(cliente.getCedula(), cliente);
 		return Response.ok(cliente).build();
 	}
-	
-	
-	
+		
 }
