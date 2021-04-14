@@ -1,20 +1,18 @@
 package com.udem.bellefemme.modelo;
 
-import java.util.Date;
-
 import javax.xml.bind.annotation.XmlRootElement;
 
 @XmlRootElement(name="SolicitudPos")
 public class SolicitudPos {
 	
 	private long id;
-	private Cliente cliente_id;
-	private Pedido pedido_id;
+	private long cliente_id;
+	private long pedido_id;
 	private String tipo;
 	private String descripcion;
 	private String contacto;
 	private String correo;
-	private Date fecha;
+	private String fecha;
 
 
 	public long getId() {
@@ -25,19 +23,19 @@ public class SolicitudPos {
 		this.id = id;
 	}
 
-	public Cliente getCliente_id() {
+	public long getCliente_id() {
 		return this.cliente_id;
 	}
 
-	public void setCliente_id(Cliente cliente_id) {
+	public void setCliente_id(long cliente_id) {
 		this.cliente_id = cliente_id;
 	}
 
-	public Pedido getPedido_id() {
+	public long getPedido_id() {
 		return this.pedido_id;
 	}
 
-	public void setPedido_id(Pedido pedido_id) {
+	public void setPedido_id(long pedido_id) {
 		this.pedido_id = pedido_id;
 	}
 
@@ -73,11 +71,13 @@ public class SolicitudPos {
 		this.correo = correo;
 	}
 
-	public Date getFecha() {
+	public String getFecha() {
 		return this.fecha;
 	}
 
-	public void setFecha(Date fecha) {
+	public void setFecha(String fecha) {
 		this.fecha = fecha;
 	}
+
+
 }

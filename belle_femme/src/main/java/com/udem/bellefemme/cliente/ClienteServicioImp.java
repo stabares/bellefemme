@@ -15,7 +15,21 @@ import com.udem.bellefemme.modelo.Cliente;
 public class ClienteServicioImp implements ClienteServicio {
 	
 	Map<Long, Cliente> clientes = new HashMap<>();	
-	
+	public ClienteServicioImp() {
+		init();
+	}
+
+	void init() {
+		Cliente cliente = new Cliente();
+		cliente.setId(123);
+		cliente.setNombre("Sara");
+		cliente.setApellidos("Soto");
+		cliente.setCorreo("sara@gmail.com");
+		cliente.setDireccion("direccion");
+		cliente.setCelular(12345);		
+		clientes.put(cliente.getId(), cliente);
+	}
+
 	@Override
 	public List<Cliente> getClientes() {
 		Collection<Cliente> result =clientes.values();
@@ -45,5 +59,4 @@ public class ClienteServicioImp implements ClienteServicio {
 		clientes.remove(id);
 		return null;
 	}
-		
 }
