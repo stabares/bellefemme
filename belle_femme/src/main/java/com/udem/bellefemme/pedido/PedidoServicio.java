@@ -16,7 +16,6 @@ import com.udem.bellefemme.modelo.Pedido;
 @Path("/serviciospedido")
 
 public interface PedidoServicio {
-	
 	@Path("/pedidos")
 	@GET
 	List<Pedido> getPedidos();
