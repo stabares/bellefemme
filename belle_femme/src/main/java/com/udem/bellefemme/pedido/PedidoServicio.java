@@ -30,7 +30,7 @@ public interface PedidoServicio {
 	
 	@Path("/pedidos/{cedulaCliente}")
 	@GET
-	Pedido getPedidoxCliente(@PathParam("cedulaCliente") Long cedulaCliente);
+	Pedido getPedidosxCliente(@PathParam("cedulaCliente") Long cedulaCliente);
 	
 	@Path("/pedidos")
 	@PUT

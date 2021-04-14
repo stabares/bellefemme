@@ -10,6 +10,7 @@ import javax.ws.rs.core.Response;
 
 import org.springframework.stereotype.Service;
 
+import com.udem.bellefemme.modelo.Cliente;
 import com.udem.bellefemme.modelo.Pedido;
 
 @Service
@@ -54,8 +55,8 @@ public class PedidoServicioImp implements PedidoServicio {
 	}
 	
 	@Override
-	public Pedido getPedidoxCliente(Long cedulaCliente) {
-		return pedidos.get(cedulaCliente);
+	public Pedido getPedidosxCliente(Long cedulaCliente) {
+		return pedidos.get(cedulaCliente); 		
 	}
 
 	@Override
