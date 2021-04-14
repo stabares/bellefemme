@@ -28,7 +28,6 @@ public class ProductoServicioImp implements ProductoServicio {
 		producto.setDescripcion("Camisetas lana tipo v");
 		producto.setCategoria("V");
 		producto.setMaterial("Lana");
-		producto.setCantidad(20);
 		producto.setPrecio(180000);
 		productos.put(producto.getCodigoProducto(), producto);
 	}
@@ -77,5 +76,4 @@ public class ProductoServicioImp implements ProductoServicio {
 		}
 		return respuesta;
 	}
-
 }

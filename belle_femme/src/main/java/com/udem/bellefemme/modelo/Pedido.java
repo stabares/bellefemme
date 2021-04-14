@@ -10,7 +10,7 @@ public class Pedido {
 	private String articulos;
 	private long cantidad;
 	private long precio;
-	private String nombreCliente;
+	private long cedulaCliente;
 	private String nombreVendedor;
 	
 	public long getCodigoPedido() {
@@ -43,11 +43,11 @@ public class Pedido {
 	public void setPrecio(long precio) {
 		this.precio = precio;
 	}
-	public String getNombreCliente() {
-		return nombreCliente;
+	public long getCedulaCliente() {
+		return cedulaCliente;
 	}
-	public void setNombreCliente(String nombreCliente) {
-		this.nombreCliente = nombreCliente;
+	public void setCedulaCliente(long cedulaCliente) {
+		this.cedulaCliente = cedulaCliente;
 	}
 	public String getNombreVendedor() {
 		return nombreVendedor;

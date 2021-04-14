@@ -10,7 +10,6 @@ public class Producto {
 	private String categoria;
 	private String material;
 	private long precio;
-	private long cantidad;
 	
 	public long getCodigoProducto() {
 		return codigoProducto;
@@ -41,12 +40,6 @@ public class Producto {
 	}
 	public void setPrecio(long precio) {
 		this.precio = precio;
-	}
-	public long getCantidad() {
-		return cantidad;
-	}
-	public void setCantidad(long cantidad) {
-		this.cantidad = cantidad;
 	}
 	
 }

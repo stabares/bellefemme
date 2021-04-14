@@ -29,7 +29,7 @@ public class PedidoServicioImp implements PedidoServicio {
 		pedido.setArticulos("Camisa ms");
 		pedido.setCantidad(12);
 		pedido.setPrecio(100000);
-		pedido.setNombreCliente("Juan");
+		pedido.setCedulaCliente(0);
 		pedido.setNombreVendedor("Mauricio");
 		pedidos.put(pedido.getCodigoPedido(), pedido);
 	}
@@ -54,8 +54,8 @@ public class PedidoServicioImp implements PedidoServicio {
 	}
 	
 	@Override
-	public Pedido getPedido(String nombreCliente) {
-		return pedidos.get(nombreCliente);
+	public Pedido getPedidoxCliente(Long cedulaCliente) {
+		return pedidos.get(cedulaCliente);
 	}
 
 	@Override
