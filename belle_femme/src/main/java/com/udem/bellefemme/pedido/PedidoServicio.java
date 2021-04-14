@@ -28,9 +28,9 @@ public interface PedidoServicio {
 	@GET
 	Pedido getPedido(@PathParam("codigoPedido") Long codigoPedido);
 	
-	@Path("/pedidos/{nombreCliente}")
+	@Path("/pedidos/{cedulaCliente}")
 	@GET
-	Pedido getPedido(@PathParam("nombreCliente") String nombreCliente);
+	Pedido getPedidoxCliente(@PathParam("cedulaCliente") Long cedulaCliente);
 	
 	@Path("/pedidos")
 	@PUT
