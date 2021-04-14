@@ -7,7 +7,6 @@ public class SolicitudPos {
 	
 	private long id;
 	private long cliente_id;
-	private long pedido_id;
 	private String tipo;
 	private String descripcion;
 	private String contacto;
@@ -29,14 +28,6 @@ public class SolicitudPos {
 
 	public void setCliente_id(long cliente_id) {
 		this.cliente_id = cliente_id;
-	}
-
-	public long getPedido_id() {
-		return this.pedido_id;
-	}
-
-	public void setPedido_id(long pedido_id) {
-		this.pedido_id = pedido_id;
 	}
 
 	public String getTipo() {

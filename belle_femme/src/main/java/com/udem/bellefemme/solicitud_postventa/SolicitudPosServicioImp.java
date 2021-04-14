@@ -31,8 +31,44 @@ public class SolicitudPosServicioImp implements SolicitudPosServicio {
 		solicitudPos.setDescripcion("descripcion");
 		solicitudPos.setFecha("12/12/2020");
 		solicitudPos.setTipo("tipo");
-		solicitudPos.setPedido_id(1);
 		solicitudesPos.put(solicitudPos.getId(), solicitudPos);
+
+		SolicitudPos solicitudPos1 = new SolicitudPos();
+		solicitudPos1.setId(101);
+		solicitudPos1.setCliente_id(456);
+		solicitudPos1.setContacto("contacto");
+		solicitudPos1.setCorreo("correo");
+		solicitudPos1.setDescripcion("descripcion");
+		solicitudPos1.setFecha("12/12/2020");
+		solicitudPos1.setTipo("tipo");
+		solicitudesPos.put(solicitudPos1.getId(), solicitudPos1);
+
+		Cliente cliente = new Cliente();
+		cliente.setId(123);
+		cliente.setNombre("Sara");
+		cliente.setApellidos("Soto");
+		cliente.setCorreo("sara@gmail.com");
+		cliente.setDireccion("direccion");
+		cliente.setCelular(12345);
+		clientes.put(cliente.getId(), cliente);
+
+		Cliente cliente2 = new Cliente();
+		cliente2.setId(456);
+		cliente2.setNombre("Sebastian");
+		cliente2.setApellidos("Soto");
+		cliente2.setCorreo("sara@gmail.com");
+		cliente2.setDireccion("direccion");
+		cliente2.setCelular(12345);
+		clientes.put(cliente2.getId(), cliente2);
+
+		Cliente cliente3 = new Cliente();
+		cliente3.setId(789);
+		cliente3.setNombre("Sofia");
+		cliente3.setApellidos("Soto");
+		cliente3.setCorreo("sara@gmail.com");
+		cliente3.setDireccion("direccion");
+		cliente3.setCelular(12345);
+		clientes.put(cliente3.getId(), cliente3);
 	}
 
 	@Override
@@ -52,8 +88,8 @@ public class SolicitudPosServicioImp implements SolicitudPosServicio {
 	}
 
 	@Override
-	public Response agregarsSolicitudespos(Long cliente_id, SolicitudPos solicitudPos) {
-		cliente_id = solicitudPos.getCliente_id();
+	public Response agregarSolicitudespos(SolicitudPos solicitudPos) {
+		long cliente_id = solicitudPos.getCliente_id();
 		Cliente clienteActual = clientes.get(cliente_id);
 		Response respuesta;
 		if (clienteActual != null) {
@@ -64,24 +100,4 @@ public class SolicitudPosServicioImp implements SolicitudPosServicio {
 		}
 		return respuesta;
 	}
-
-	
-
-	// Response respuesta;
-	// if(clienteActual!=null) {
-	// solicitudesPos.put(solicitudPos.getId(), solicitudPos);
-	// return Response.ok(solicitudPos).build();
-	// }else {
-	// respuesta = Response.notModified().build();
-	// }
-	// return respuesta;
-	// long cliente_id = solicitudPos.getCliente_id();
-	// System.out.println(cliente_id);
-	// if (getCliente(cliente_id)!=null) {
-	// solicitudesPos.put(solicitudPos.getId(), solicitudPos);
-	// return Response.ok(solicitudPos).build();
-	// } else {
-	// System.out.println("El cliente ingresado no existe");
-	// return Response.noContent().build();
-	// }
 }

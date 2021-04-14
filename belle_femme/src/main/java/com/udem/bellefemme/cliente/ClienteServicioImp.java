@@ -28,6 +28,24 @@ public class ClienteServicioImp implements ClienteServicio {
 		cliente.setDireccion("direccion");
 		cliente.setCelular(12345);		
 		clientes.put(cliente.getId(), cliente);
+
+		Cliente cliente2 = new Cliente();
+		cliente2.setId(456);
+		cliente2.setNombre("Sebastian");
+		cliente2.setApellidos("Soto");
+		cliente2.setCorreo("sara@gmail.com");
+		cliente2.setDireccion("direccion");
+		cliente2.setCelular(12345);		
+		clientes.put(cliente2.getId(), cliente2);
+
+		Cliente cliente3 = new Cliente();
+		cliente3.setId(789);
+		cliente3.setNombre("Sofia");
+		cliente3.setApellidos("Soto");
+		cliente3.setCorreo("sara@gmail.com");
+		cliente3.setDireccion("direccion");
+		cliente3.setCelular(12345);		
+		clientes.put(cliente3.getId(), cliente3);
 	}
 
 	@Override

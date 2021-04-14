@@ -24,5 +24,5 @@ public interface SolicitudPosServicio {
 	
 	@Path("/solicitudespos")
 	@POST
-	Response agregarsSolicitudespos(@PathParam("cliente_id") Long cliente_id, SolicitudPos solicitudPos);
+	Response agregarSolicitudespos(SolicitudPos solicitudPos);
 }
