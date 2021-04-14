@@ -10,7 +10,6 @@ import javax.ws.rs.core.Response;
 
 import org.springframework.stereotype.Service;
 
-import com.udem.bellefemme.modelo.Cliente;
 import com.udem.bellefemme.modelo.Pedido;
 
 @Service
@@ -84,5 +83,5 @@ public class PedidoServicioImp implements PedidoServicio {
 		}
 		return respuesta;
 	}
-
+	
 }
